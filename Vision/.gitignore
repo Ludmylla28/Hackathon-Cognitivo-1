@@ -1,6 +1,11 @@
+node_modules
+coverage
 .DS_Store
-node_modules/
-dist/
-npm-debug.log*
-test/unit/coverage
-test/e2e/reports
+.idea
+.env
+npm-debug.log
+uploads/*
+!uploads/README.md
+.jshintignore
+.jshintrc
+delete-all.js
