@@ -6,7 +6,7 @@ applications:
 - name: Hackathon-Cognitivo-Visual
   path: .
   command: npm start
-  memory: 512M
+  memory: 64M
   services:
   - visual-recognition-service
   env:
