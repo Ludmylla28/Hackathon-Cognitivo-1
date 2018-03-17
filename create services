@@ -1,0 +1,3 @@
+cf create-service watson_vision_combined free hackaton-vision-service
+cf create-service language_translator 	lite hackaton-language-service
+cf create-service conversation 			free hackaton-assistant-service

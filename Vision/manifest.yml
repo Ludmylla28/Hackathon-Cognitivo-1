@@ -1,12 +1,12 @@
 declared-services:
   hackaton-vision-service:
-    label: hackaton-vision-service
+    label: hackaton-vision
     plan: free
 applications:
 - name: hackaton-vision
   path: .
   command: npm start
-  memory: 64M
+  memory: 256M
   services:
   - hackaton-vision-service
   env:
