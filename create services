@@ -24,12 +24,12 @@ curl -i -u "7097f778-1691-4c52-b9a9-a063df5ed019":"gRiS8QQePMcT" \
 "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
 
 
-## Config Natural Language Classifier
+## Config Natural Language Understanding
 cf create-service natural-language-understanding free hackaton-nlu-service
 cf create-service-key hackaton-nlu-service myKey
 cf service-key hackaton-nlu-service myKey
 
-## Config Natural Language Classifier
+## Config Tone Analyzer
 cf create-service tone_analyzer lite hackaton-tone-service
 cf create-service-key hackaton-tone-service myKey
 cf service-key hackaton-tone-service myKey
