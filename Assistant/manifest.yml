@@ -1,0 +1,15 @@
+---
+declared-services:
+  hackaton-assistant-service:
+    label: hackaton-assistant-service
+    plan: free
+applications:
+- name: hackathon-assistant
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - hackaton-assistant-service
+  env:
+    NPM_CONFIG_PRODUCTION: false

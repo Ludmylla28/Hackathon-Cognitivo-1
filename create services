@@ -43,3 +43,8 @@ cf service-key hackaton-stt-service myKey
 cf create-service text_to_speech standard hackaton-tts-service
 cf create-service-key hackaton-tts-service myKey
 cf service-key hackaton-tts-service myKey
+
+## Config Natural Personality Insights
+cf create-service personality_insights lite hackaton-personality-service
+cf create-service-key hackaton-personality-service myKey
+cf service-key hackaton-personality-service myKey

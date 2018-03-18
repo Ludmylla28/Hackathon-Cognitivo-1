@@ -1,0 +1,10 @@
+sudo: false
+language: java
+install: /bin/true
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - $HOME/.m2/repository
+notifications:
+  email: false

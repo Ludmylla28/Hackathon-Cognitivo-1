@@ -1,0 +1,8 @@
+applications:
+- name: hackaton-nlu
+  path: .
+  buildpack: sdk-for-nodejs
+  command: npm start
+  memory: 512M
+  services:
+  - hackaton-nlu-service

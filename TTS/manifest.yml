@@ -1,0 +1,8 @@
+---
+applications:
+- services:
+  - hackaton-tts-service
+  name: hackaton-tts
+  command: npm start
+  path: .
+  memory: 256M

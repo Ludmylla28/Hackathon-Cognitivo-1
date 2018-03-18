@@ -1,0 +1,20 @@
+language: node_js
+sudo: true
+node_js: 4
+script:
+- npm run lint
+env:
+  global:
+  - BX_APP=language-translator-demo
+  - BX_API=https://api.ng.bluemix.net
+  - BX_ORGANIZATION=WatsonPlatformServices
+  - BX_SPACE=demos
+before_deploy: npm install -g https://github.com/andresfvilla/bx-blue-green
+deploy:
+  provider: script
+  script:
+    - bx-blue-green-travis
+  on:
+    branch: master
+    repo: watson-developer-cloud/language-translator-nodejs
+  skip_cleanup: true

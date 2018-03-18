@@ -1,0 +1,13 @@
+---
+declared-services:
+  hackaton-tone-service:
+    label: hackaton-tone
+    plan: lite
+applications:
+- services:
+  - hackaton-tone-service
+  name: hackaton-tone
+  command: npm start
+  path: .
+  instances: 2
+  memory: 256MB

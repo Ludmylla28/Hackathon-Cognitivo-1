@@ -1,0 +1,11 @@
+declared-services:
+  hackaton-nlc-service:
+    label: hackaton-nlc
+    plan: standard
+applications:
+- services:
+  - hackaton-nlc-service
+  name: hackaton-nlc
+  command: npm start
+  path: .
+  memory: 256M

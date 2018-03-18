@@ -1,0 +1,12 @@
+---
+declared-services:
+  hackaton-stt-service:
+    label: hackaton-stt
+    plan: standard
+applications:
+- name: hackaton-stt
+  path: .
+  command: npm start
+  memory: 256M
+  services:
+  - hackaton-stt-service

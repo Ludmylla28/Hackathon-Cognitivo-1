@@ -1,0 +1,9 @@
+---
+applications:
+- name: hackaton-personality
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - hackaton-personality-service

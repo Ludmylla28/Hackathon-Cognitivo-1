@@ -1,0 +1,11 @@
+declared-services:
+  hackaton-language-service:
+    label: hackaton-language-service
+    plan: lite
+applications:
+- services:
+  - hackaton-language-service
+  name: hackaton-language
+  command: npm start
+  path: .
+  memory: 256M
