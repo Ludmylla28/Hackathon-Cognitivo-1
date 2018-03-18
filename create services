@@ -38,3 +38,8 @@ cf service-key hackaton-tone-service myKey
 cf create-service speech_to_text standard hackaton-stt-service
 cf create-service-key hackaton-stt-service myKey
 cf service-key hackaton-stt-service myKey
+
+## Config Natural Text to Speech
+cf create-service text_to_speech standard hackaton-tts-service
+cf create-service-key hackaton-tts-service myKey
+cf service-key hackaton-tts-service myKey
