@@ -46,10 +46,25 @@ app.post('/api/message', function(req, res) {
       }
     });
   }
+
+  var dados = {
+    name: "Sr(a)",
+    nameVirtual: "Hackaton Suporte",
+    email: 'afirmanet@gmail.com',
+    telefone: '0800 000 000',
+    origem: 'site'
+  };
+
   var payload = {
     workspace_id: workspace,
     context: req.body.context || {},
     input: req.body.input || {}
+  };
+
+  payload.context = {
+    name: dados.name, 
+    nameVirtual: dados.nameVirtual, 
+    telefone: dados.telefone
   };
 
   // Send the input to the conversation service
@@ -57,6 +72,26 @@ app.post('/api/message', function(req, res) {
     if (err) {
       return res.status(err.code || 500).json(err);
     }
+
+    var retorno = {
+      text: []
+    };
+
+    var text = data.output.text;
+    if(text && text.length > 0){
+        text.forEach(function(text){
+            retorno.text.push(text);
+        });
+    }
+
+    var text_rh = data.output.text_rh;
+    if(text_rh && text_rh.length > 0){
+        text_rh.forEach(function(text) {
+            retorno.text.push(text);
+        });    
+    }
+
+    data.output.text = retorno.text;
     return res.json(updateMessage(payload, data));
   });
 });
