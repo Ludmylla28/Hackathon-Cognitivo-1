@@ -1,3 +1,35 @@
+## Config Watson Vision Combined
 cf create-service watson_vision_combined free hackaton-vision-service
+cf create-service-key hackaton-language-service myKey
+cf service-key hackaton-language-service myKey
+
+## Config Language Translator
 cf create-service language_translator 	lite hackaton-language-service
+cf create-service-key hackaton-language-service myKey
+cf service-key hackaton-language-service myKey
+
+## Config conversation
 cf create-service conversation 			free hackaton-assistant-service
+cf create-service-key hackaton-assistant-service myKey
+cf service-key hackaton-assistant-service myKey
+
+## Config Natural Language Classifier
+cf create-service natural_language_classifier standard hackaton-nlc-service
+cf create-service-key hackaton-nlc-service myKey
+cf service-key hackaton-nlc-service myKey
+
+curl -i -u "7097f778-1691-4c52-b9a9-a063df5ed019":"gRiS8QQePMcT" \
+-F training_data=@training/weather_data_train.csv \
+-F training_metadata="{\"language\":\"en\",\"name\":\"TutorialClassifier\"}" \
+"https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+
+
+## Config Natural Language Classifier
+cf create-service natural-language-understanding free hackaton-nlu-service
+cf create-service-key hackaton-nlu-service myKey
+cf service-key hackaton-nlu-service myKey
+
+## Config Natural Language Classifier
+cf create-service tone_analyzer lite hackaton-tone-service
+cf create-service-key hackaton-tone-service myKey
+cf service-key hackaton-tone-service myKey
