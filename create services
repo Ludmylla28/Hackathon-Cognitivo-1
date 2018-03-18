@@ -33,3 +33,8 @@ cf service-key hackaton-nlu-service myKey
 cf create-service tone_analyzer lite hackaton-tone-service
 cf create-service-key hackaton-tone-service myKey
 cf service-key hackaton-tone-service myKey
+
+## Config Natural Speech to Text
+cf create-service speech_to_text standard hackaton-stt-service
+cf create-service-key hackaton-stt-service myKey
+cf service-key hackaton-stt-service myKey
